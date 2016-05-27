@@ -10,7 +10,7 @@ html {
 body {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, .25);
   margin: 0 160px;
-  background-image: url("bg.jpg");
+  background-image: url('bg.jpg');
   height: 883px;
   width: 960px;
   border: 2px double #999;
@@ -58,7 +58,7 @@ body {
 }
 
 .fline {
-padding: 0 70px 0 70px;
+  padding: 0 70px;
 }
 
 .fline img {
@@ -68,7 +68,7 @@ padding: 0 70px 0 70px;
 }
 
 .country ul {
-  padding: 0 69px 0 69px;
+  padding: 0 69px;
   list-style-type: none;
   color: #e6e6e6;
   font-family: Tahoma;
@@ -82,7 +82,7 @@ padding: 0 70px 0 70px;
 }
 
 .sline {
-padding: 50px 70px 0 70px;
+  padding: 50px 70px 0;
 }
 
 .sline img {
