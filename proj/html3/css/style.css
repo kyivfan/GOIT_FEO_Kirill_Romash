@@ -121,35 +121,35 @@ body {
 }
 
 .footer {
-    display: block;
-    height: 40px;
-    background-color: #e1e1e1;
+  display: block;
+  height: 40px;
+  background-color: #e1e1e1;
 }
 
 .footer li {
-    display: inline-block;
-    list-style: none;
-    margin-right: 40px;
+  display: inline-block;
+  list-style: none;
+  margin-right: 40px;
 }
 .footer a {
-    display: inline-block;
-    width: 100px;
-    text-decoration: none;
-    padding: 11px 0;
-    font-size: 14px;
-    color: #373737;
-    text-align: center;
+  display: inline-block;
+  width: 100px;
+  text-decoration: none;
+  padding: 11px 0;
+  font-size: 14px;
+  color: #373737;
+  text-align: center;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright {
-    display: inline-block;
-    padding: 11px 0;
-    float: right;
-    font-size: 14px;
-    color: #373737;
-    text-align: right;
+  display: inline-block;
+  padding: 11px 0;
+  float: right;
+  font-size: 14px;
+  color: #373737;
+  text-align: right;
 }
