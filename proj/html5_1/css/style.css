@@ -23,12 +23,11 @@ body {
   margin: 0 auto;
   height: 1064px;
   max-width: 1215px;
-  border: 4px solid black;
-  border-style: double;
+  border: 4px double black;
 }
 
 .header {
-  background: url(../img/bgblue.jpg) no-repeat;
+  background: url('../img/bgblue.jpg') no-repeat;
   width: 100%;
   height: 36px;
 }
@@ -41,15 +40,21 @@ body {
 
 .menu {
   list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu li {
   color: #60b5ed;
   margin: 0 7px;
-  padding: 8px 9px 0;
-  height: 100%;
+  padding: 0 6px;
+  height: 36px;
   float: left;
   font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu li:nth-child(6) {
@@ -57,36 +62,36 @@ body {
 }
 
 .menu li:nth-child(n+7) {
-  color: #ffffff;
+  color: #fff;
 }
 
 .menu li:nth-child(n+7):hover {
   background: linear-gradient(to top, #2e7ac4, #50afdc);
   border: 1px solid #50afdc;
-  height: 25px;
+  height: 34px;
+  padding: 0 5px;
 }
 
 .flag {
-  background: url(../img/flag.png) no-repeat;
-  height: 23px;
+  background: url('../img/flag.png') no-repeat;
+  height: 26px;
   width: 21px;
-  margin: 0 10px 2px;
+  margin: 0 10px;
 }
 
 .mainmenu a {
-  color: #ffffff;
+  color: #fff;
 }
 
 .menu li:hover {
   background: #4eabda;
   color: #ffffff;
-  height: 28px;
-  padding: 8px 9px 0;
+  height: 36px;
   margin: 0 7px;
 }
 
 .photo {
-  background: url(../img/bg.jpg) no-repeat;
+  background: url('../img/bg.jpg') no-repeat;
   height: 1028px;
   width: 100%;
   display: flex;
@@ -122,33 +127,70 @@ body {
 }
 
 .facebook {
-  background: url(../img/fb.png) no-repeat;
+  background: linear-gradient(to top, #314174, #3e5694);
   width: 276px;
   height: 35px;
-  margin: auto;
+  margin: 0 142px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 -1px #7789b7;
+}
+
+.fb {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fb li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f {
+  width: 36px;
+  font-size: 20px;
+  height: 35px;
+  color: white;
+  font-weight: bolder;
+  border-right: 1px solid #1d3c73;
+}
+
+.login_with {
+  width: 236px;
+  border-left: 1px solid #4b67a6;
+  color: white;
+  height: 35px;
+  font-weight: bold;
+}
+
+.login_with p {
+  font-weight: normal;
 }
 
 .line {
   position: relative;
   width: 276px;
   height: 32px;
-  color: #999999;
+  color: #999;
   margin: 14px auto;
 }
 
-.hr1 {
+.hrleft {
   position: absolute;
   padding-top: 20px;
   width: 120px;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #666;
 }
 
-.hr2 {
+.hrright {
   position: absolute;
   padding-top: 20px;
   width: 120px;
   left: 155px;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #666;
 }
 
 .text {
@@ -169,7 +211,7 @@ input {
   margin-top: 18px;
   width: 257px;
   height: 36px;
-  background: linear-gradient(to top, #111111, #0f0e0e);
+  background: linear-gradient(to top, #111, #0f0e0e);
   color: white;
   border: none;
   border-bottom: 1px solid #484948;
@@ -186,11 +228,11 @@ input:focus {
 }
 
 input::-webkit-input-placeholder {
-  color: #cccccc;
+  color: #ccc;
 }
 
 input::-moz-placeholder {
-  color: #cccccc;
+  color: #ccc;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -219,19 +261,18 @@ input#send_updates{
   margin-right: 5px;
 }
 
-input[type='submit'] {
+input[type="submit"] {
   background: linear-gradient(to top, #2e7ac4, #50aedb);
   border: 1px solid #4c9dd7;
-  color: #ffffff;
+  color: #fff;
   height: 34px;
   width: 150px;
   padding: 0;
 }
 
-
 .footer {
   text-align: center;
-  color: #cccccc;
+  color: #ccc;
   font-size: 11px;
   width: 100%;
   height: 64px;
