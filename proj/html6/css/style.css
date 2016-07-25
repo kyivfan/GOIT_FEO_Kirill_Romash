@@ -437,12 +437,83 @@ figcaption {
   margin-top: 10px;
 }
 
-.model {
+.model11 {
+  margin: -8px -1px -5px 1px;
+  padding: 0px 0px 2px 1px;
   color: #1f2528;
   font-size: 13px;
-  margin-top: -9px;
-  padding: 0px 0px 3px 2px;
+  width: 139px;
+}
+
+.model12 {
+  margin: -10px -3px 0 -2px;
+  padding: 2px 1px 2px 3px;
+  letter-spacing: -0.09px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model13 {
+  margin: -8px -1px -5px -1px;
+  padding: 0px 0px 2px 1px;
+  letter-spacing: -0.1px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model21 {
+  margin: -8px -1px -5px 1px;
+  padding: 0px 0px 2px 1px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model22 {
+  margin: -9px -1px -5px 0;
+  padding: 0px 0px 2px 1px;
+  letter-spacing: -0.09px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model23 {
+  margin: -10px 0 0 0;
+  padding: 0 0 3px 0;
   letter-spacing: -0.05px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model31 {
+  margin: -7px -1px -5px 1px;
+  padding: 0 0 2px 1px;
+  letter-spacing: -0.09px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model32 {
+  margin: -7px -1px 0 1px;
+  padding: 0 0 2px 1px;
+  letter-spacing: -0.09px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
+}
+
+.model33 {
+  margin: -7px 0 0 0;
+  padding: 0 0 2px 0;
+  letter-spacing: -0.09px;
+  color: #1f2528;
+  font-size: 13px;
+  width: 139px;
 }
 
 .tireimg {
