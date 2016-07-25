@@ -419,8 +419,9 @@ figure {
 }
 
 figure .tireimg {
+  padding-top: 5px;
   width: 136px;
-  height: 124px;
+  height: 122px;
   background-color: white;
   border: 1px solid #a7b1b4;
   border-radius: 8px;
@@ -434,97 +435,25 @@ figcaption {
 .brand {
   color: #206988;
   font-size: 15px;
-  margin-top: 10px;
+  padding-top: 10px;
+  height: 17px;
 }
 
-.model11 {
-  margin: -8px -1px -5px 1px;
-  padding: 0px 0px 2px 1px;
+.model {
+  margin: -1px 0 0 1px;
+  padding-left: 1px;
+  letter-spacing: -0.08px;
   color: #1f2528;
   font-size: 13px;
-  width: 139px;
-}
-
-.model12 {
-  margin: -10px -3px 0 -2px;
-  padding: 2px 1px 2px 3px;
-  letter-spacing: -0.09px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model13 {
-  margin: -8px -1px -5px -1px;
-  padding: 0px 0px 2px 1px;
-  letter-spacing: -0.1px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model21 {
-  margin: -8px -1px -5px 1px;
-  padding: 0px 0px 2px 1px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model22 {
-  margin: -9px -1px -5px 0;
-  padding: 0px 0px 2px 1px;
-  letter-spacing: -0.09px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model23 {
-  margin: -10px 0 0 0;
-  padding: 0 0 3px 0;
-  letter-spacing: -0.05px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model31 {
-  margin: -7px -1px -5px 1px;
-  padding: 0 0 2px 1px;
-  letter-spacing: -0.09px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model32 {
-  margin: -7px -1px 0 1px;
-  padding: 0 0 2px 1px;
-  letter-spacing: -0.09px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.model33 {
-  margin: -7px 0 0 0;
-  padding: 0 0 2px 0;
-  letter-spacing: -0.09px;
-  color: #1f2528;
-  font-size: 13px;
-  width: 139px;
-}
-
-.tireimg {
-  margin-top: -5px;
-  padding-top: 5px;
+  width: 138px;
+  height: 16px;
 }
 
 .price {
-  padding: 3px 5px 0 10px;
+  padding: 3px 0 0 7px;
   color: #114165;
   font-size: 16px;
+  height: 20px;
   font-family: Arial, sans-serif;
   font-weight: 800;
   font-style: italic;
