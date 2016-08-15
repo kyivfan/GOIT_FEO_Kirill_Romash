@@ -31,11 +31,16 @@
         </ul>
       </nav>
       <div class="slider">
-        <div class="slider__text">
-        <h1 class="slider__text--title">Lorem Ipsum Dolor</h1>
-        <h2 class="slider__text--moto">IT WILL MAKE ALL OF YOUR DREAMS COME</h2>
-        <p class="slided__text--paragraph">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod </p>
-        </div>
+        <content class="slider__content">
+          <div class="slider__text">
+          <h1 class="slider__text--title">Lorem Ipsum Dolor</h1>
+          <h2 class="slider__text--moto">IT WILL MAKE ALL OF YOUR DREAMS COME</h2>
+          <p class="slided__text--paragraph">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod </p>
+          </div>
+          <div class="slider__image">
+            <img class="slider__image--iphone" alt="iphone" src="img/iphone.png" alt="" >
+          </div>
+        </content>
         <div class="slider__radio slider__flexbox">
 			<input class="slider__item" type="radio" name="button" id=button1 value="button1">
 			<label class="slider__label" for="button1"></label>
@@ -72,11 +77,13 @@
   <div class="sectionmiddle">
     <div class="start">
       <img class="start__avatar" src="img/avatar.png" alt="avatar">
-			<article class="start__text">
+      <div class="start__text_container">
+      <article class="start__text">
 				<h2 class="start__title start__text--black">PINGBULLER</h2>
         <h2 class="start__title start__text--pink">STARTS HERE</h2>
 				<p class="start__paragraph">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”</p>
 			</article>
+      </div>
 			<div class="start__input">
 				<input class="start__input__item" type="radio" name="button" id=button5  value="button5">
 				<label class="start__input__label" for="button5"></label>
@@ -118,10 +125,40 @@
 </div>
 <div class="sectionlow-wrapper">
   <div class="sectionlow">
+      <section class="news">
+        <ul class="news__list">
+          <li class="news__list__item">
+            <h1 class="news__title">NEWS CATEGORIES</h1>
+            <p class="news__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis </p>
+          </li>
+          <li class="news__list__item">
+            <h1 class="news__title">NEWS CATEGORIES</h1>
+            <p class="news__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis</p>
+          </li>
+          <li class="news__list__item">
+            <h1 class="news__title">NEWS CATEGORIES</h1>
+            <p class="news__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis </p>
+          </li>
+        </ul>
+      </section>
   </div>
 </div>
 <div class="footer-wrapper">
   <div class="footer">
+      <ul class="menu menu--footer">
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">HOME</a></li>
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">ABOUT</a></li>
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">BLOG</a></li>
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">PRODUCTS</a></li>
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">LOREM IPSUM</a></li>
+				<li class="menu__item--footer">
+          <a class="menu__link--footer" href="#">DOLOR SIT AMET</a></li>
+			</ul>
     <div class="footer__author">
       <p class="footer__author--txt">Designed by <span class="footer__author--bold">Pingbull AS</span></p>
     </div>
