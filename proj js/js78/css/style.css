@@ -6,10 +6,17 @@
 .wrapper {
   padding:20px;
   margin: 30px auto;
-  height: 600px;
+  height: 400px;
   width: 600px;
-  border: 1px solid black;
+  border: 3px solid #979a85;
+  border-radius: 8px 8px;
   background: linear-gradient(to top, #ffc00f, #7517b0);
+}
+
+/*<!-- part 1 - Tabs -->*/
+
+.tabs {
+  height: 200px;
 }
 
 .tablist {
@@ -19,13 +26,13 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  border: 3px solid gray;
+  border: 3px solid #979a85;
   border-radius: 15px 15px;
   box-sizing: border-box;
   background: linear-gradient(to top, #ffc00f, #7517b0);
 }
 
-.tablist li {
+.tablist li, button {
   display: block;
   width: 150px;
   height: 22px;
@@ -65,8 +72,65 @@
   display: none;
   font-family: Tahoma, sans-serif;
   font-size: 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
 .content.visible {
   display: block;
+}
+
+/*<!-- part 2 - Tooltips -->*/
+
+.login {
+  margin: 10px auto;
+  height: 166px;
+  width: 95%;
+  border-radius: 25px 25px;
+  border: 2px solid #fff;
+  color:white;
+  background: linear-gradient(to top left, #ced2b5, #000);
+}
+
+.loginform {
+  padding: 16px;
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+label {
+  display: block;
+  width: 70px;
+}
+
+.data {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 0;
+  overflow: hidden;
+  top:3px;
+  right:242px;
+  font-size: 10px;
+  color: #b9b9b9;
+  border: 1px solid #b9b9b9;
+  border-radius: 5px 5px;
+  opacity:0;
+  text-align: center;
+}
+
+button {
+  margin-left: 14px;
+  color: #fff;
+  background: linear-gradient(to top left, #ced2b5, #000);
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
 }
