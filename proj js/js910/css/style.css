@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
     background: #F0EFE7;
     margin: 0;
@@ -43,8 +49,113 @@ pre {
 .wrapper {
     background: #36aa36;
     max-width: 720px;
-    padding: 0 20px 40px 20px;
+    padding: 20px 40px 20px;
     margin: auto;
+}
+
+/*DROPDOWN*/
+
+
+.mainmenu-wrapper {
+  margin: 20px auto;
+  background: #e87c7c;
+  box-sizing: border-box;
+  border: 11px solid white;
+  border-radius: 6px 6px;
+  padding: 4px;
+  width: 620px;
+  height: 400px;
+  color: black;
+}
+
+.mainmenu {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 50px;
+}
+
+.mainmenu a:hover,
+.mainmenu a:active,
+.mainmenu a:focus {
+  color: #000;
+}
+
+.menu {
+  width: 100%;
+  font-family: 'Calibri', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.menu li {
+  display: block;
+  float: left;
+  position: relative;
+  height: 32px;
+  width: 19.66%;
+  margin: 0 1px;
+  box-sizing:border-box;
+  box-shadow: 1px 1px 1px #666;
+  border: 2px solid white;
+  border-radius: 4px 4px;
+  background-color: red;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  float: left;
+  text-decoration: none;
+  color: #fff;
+  line-height:32px;
+  margin: 0 5px;
+}
+
+.submenu {
+  background-color: red;
+  display: none;
+  width: 116px;
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+
+.submenu li {
+  width: 116px;
+}
+
+.arrow-right {
+  position: absolute;
+  left: 102px;
+  top: 14px;
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 6px solid white;
+}
+
+.submenu a {
+  text-decoration: none;
+}
+
+.inner {
+  position: absolute;
+  top: -2px;
+  left: 115px;
 }
 
 /*SELECT*/
@@ -58,7 +169,6 @@ pre {
   padding: 0 4px 4px;
   width: 620px;
   color: black;
-
 }
 
 #myselect {
