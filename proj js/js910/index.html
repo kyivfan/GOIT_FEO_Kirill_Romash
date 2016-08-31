@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HW JS_9_10</title>
+    <!-- Shared assets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Example assets -->
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+    <link type="text/css" rel="stylesheet" href="css/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="css/shThemeDefault.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mainmenu-wrapper">
+        <h1>Dropdown menu</h1>
+        <nav class="mainmenu">
+          <ul class="menu clearfix">
+            <li><a href="">Nav1</a></li>
+            <li class="dropdown"><a href="">DropMeDown<p class="arrow-right"></p></a>
+              <ul class="submenu">
+                <li><a href="">Nav2.1</a></li>
+                <li><a href="">Nav2.2</a></li>
+                <li><a href="">Nav2.3</a></li>
+                <li class="dropdown"><a href="">DropMeDown</a>
+                  <ul class="submenu inner">
+                    <li><a href="">Nav2.4.1</a></li>
+                    <li class="dropdown"><a href="">DropMeDown</a>
+                      <ul class="submenu inner">
+                        <li><a href="">NoDropdown:(</a></li>
+                        <li><a href="">NoDropdown:(</a></li>
+                        <li><a href="">NoDropdown:(</a></li>
+                        <li><a href="">NoDropdown:(</a></li>
+                        <li><a href="">NoDropdown:(</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="">Nav2.4.3</a></li>
+                    <li><a href="">Nav2.4.4</a></li>
+                    <li><a href="">Nav2.4.5</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Nav3.5</a></li>
+              </ul>
+            </li>
+            <li><a href="">Nav3</a></li>
+            <li><a href="">Nav4</a></li>
+            <li><a href="">Nav5</a></li>
+          </ul>
+        </nav>
+        <h4>Try this dropdown menu by clickin' the "DropMeDown" buttons</h4>
+      </div>
+      <h1>Marselle carousel</h1>
+        <div class="jcarousel-wrapper">
+          <div class="jcarousel">
+            <ul>
+              <li><img src="img/img1.jpg" width="600" height="400" alt=""></li>
+              <li><img src="img/img2.jpg" width="600" height="400" alt=""></li>
+              <li><img src="img/img3.jpg" width="600" height="400" alt=""></li>
+              <li><img src="img/img4.jpg" width="600" height="400" alt=""></li>
+              <li><img src="img/img5.jpg" width="600" height="400" alt=""></li>
+              <li><img src="img/img6.jpg" width="600" height="400" alt=""></li>
+            </ul>
+          </div>
+          <p class="photo-credits">Photos by Kirill Romash</p>
+          <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+          <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+          <p class="jcarousel-pagination"></p>
+        </div>
+        <div class="select-wrapper">
+          <h1>jQuery Searchable DropDown</h1>
+          <p>Project homepage: <a href="https://sourceforge.net/projects/jsearchdropdown/">https://sourceforge.net/projects/jsearchdropdown/</a></p>
+  	      <p>Make your choise:</p>
+  	      <form>
+  		      <select id="myselect">
+  			      <option value="1">Choose Me 1</option>
+  			      <option value="2">Choose Me 2</option>
+  			      <option value="3">Choose Me 3</option>
+  			      <option value="4">Choose Me 4</option>
+  			      <option value="5">Choose Me 5</option>
+  			      <option value="6">Choose Me 6</option>
+  			      <option value="7">Choose Me 7</option>
+  			      <option value="8">Choose Me 8</option>
+  			      <option value="9">Choose Me 9</option>
+  			      <option value="10">Choose Me 10</option>
+            </select>
+            <p>CURRENT SELECTED: <span id="value">&nbsp;</span></p>
+          </form>
+        </div>
+        <div class="checkbox-wrapper">
+          <h1>jQuery custom checkbox</h1>
+          <div>
+            <label for="ch1">Check Me on jQuery 1</label>
+            <span class="niceCheck"><input type="checkbox" name="ch1" value="on" tabindex="1"></span>
+          </div>
+          <div>
+            <label for="ch1">Check Me on jQuery 2</label>
+            <span class="niceCheck niceChecked"><input type="checkbox" name="ch2" checked="true" value="2" tabindex="2"></span>
+          </div>
+          <div>
+            <label for="ch1">Check Me on jQuery 3</label>
+            <span class="niceChecked niceCheckDisabled"><input type="checkbox" name="ch3" checked="true" value="on" tabindex="0"></span>
+          </div>
+        </div>
+        <div class="checkbox-wrapper cssCheckbox">
+          <h1>CSS custom checkbox</h1>
+          <input type="checkbox" id="test-check1">
+          <label for="test-check1">Check Me on CSS</label>
+        </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/dropdownscript.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="js/selectscript.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.searchabledropdown-1.0.8.min.js"></script>
+    <script type="text/javascript" src="js/jquery.checkbox.js"></script>
+    <script type="text/javascript" src="js/dropdownscript.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js"></script>
+  </body>
+</html>
