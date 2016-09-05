@@ -1,13 +1,14 @@
 
+
 var progTest = {
     title: "Тест по программированию",
-    questions: ["Вопрос №1", "Вопрос №2" , "Вопрос №3"],
+    question: ["Вопрос №1", "Вопрос №2" , "Вопрос №3"],
     answers: [["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
               ["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
               ["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"]],
     checkres: 'Проверить мои результаты',
 
-    progTest_questions: function(title) {
+    questions: function(title) {
 
         var h1 = document.createElement('h1');
         h1.innerHTML = this.title;
@@ -16,12 +17,12 @@ var progTest = {
 
     render: function () {
 
-        var q = this.questions.length;
+        var q = this.question.length;
         var answ,ul,li,p,checkbox,txtEl,label;
 
         for (var i = 0; i < q; i++) {
             p = document.createElement('p');
-            p.innerHTML = this.questions[i];
+            p.innerHTML = this.question[i];
             document.body.appendChild(p);
 
             ul = document.createElement('ul');
@@ -49,6 +50,13 @@ var progTest = {
             }
     },
 
+    init: function () {
+      progTest.questions();
+      console.log(progTest);
+      progTest.render();
+      progTest.createButton();
+    },
+
     createButton: function () {
         var submitRes = document.createElement('input');
         submitRes.setAttribute('type', 'submit');
@@ -57,7 +65,4 @@ var progTest = {
     }
 }
 
-progTest.progTest_questions();
-console.log(progTest);
-progTest.render();
-progTest.createButton();
+progTest.init();
