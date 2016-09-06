@@ -5,24 +5,25 @@
     <title>Hometask_56_js</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  </head>
   <body>
     <div class="timer">
       <div class="board">
         <div class="timeboard">
-          <div class="hours">00</div>
+          <div class="hours" id="hours">00</div>
           <div class="digits">:</div>
-          <div class="mins">00</div>
+          <div class="mins" id="mins">00</div>
           <div class="digits">:</div>
-          <div class="secs">00</div>
-          <div class="millisecs">000</div>
+          <div class="secs" id="secs">00</div>
+          <div class="millisecs" id="millisecs">000</div>
         </div>
       </div>
       <div class="buttons">
-        <button type="button" class="btn btn-success btn-block start">Start</button>
-        <button type="button" class="btn btn-primary btn-block pause">Pause</button>
-        <button type="button" class="btn btn-danger btn-block clear">Clear</button>
+        <button type="button" class="btn btn-success btn-block" id="start">Start</button>
+        <button type="button" class="btn btn-primary btn-block" id="pause">Pause</button>
+        <button type="button" class="btn btn-danger btn-block" id="clear">Clear</button>
       </div>
     </div>
-  <script src="js/script.js"></script>
+      <script src="js/script.js"></script>
   </body>
 </html>

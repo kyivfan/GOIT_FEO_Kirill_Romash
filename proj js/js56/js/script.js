@@ -1,90 +1,54 @@
-var hour = document.querySelector('.hours');
-var min = document.querySelector('.mins');
-var sec = document.querySelector('.secs');
-var mil = document.querySelector('.millisecs');
+var counter = 0,
+timerId = 0,
+startStopDefine = false;
 
-var start = document.querySelector('.start');
-var pause = document.querySelector('.pause');
-var clear = document.querySelector('.clear');
-var flag = false;
-
-// задаем стартовую точку даты
 function startTimer() {
- if(!flag) initialDate = new Date;
+  if (startStopDefine == false) {
+    timerId = setInterval(function() {
+      counter += 4;
+
+      var mil = counter % 1000;
+      if (mil < 100) {mil = '0' + mil};
+      if (mil < 10) {mil = '0' + mil};
+      var sec = Math.floor(counter/1000)%60;
+      if (sec < 10) {sec = '0' + sec};
+      var min = Math.floor(counter/60000)%60;
+      if (min < 10) {min = '0' + min};
+      var hour = Math.floor(counter/3600000)%24;
+      if (hour < 10) {hour = '0' + hour};
+
+      hours.innerHTML = hour;
+      mins.innerHTML = min;
+      secs.innerHTML = sec;
+      millisecs.innerHTML = mil;
+      start.style.display = 'none';
+      pause.style.display = 'block';
+    }, 1);
+    startStopDefine = true;
+  } else {
+    pauseTimer();
+    }
 }
 
-//получаем дату
-function getTime() {
-  var currentDate = new Date;
-  timer = new Date (currentDate - initialDate);
-
-  milliseconds = timer.getMilliseconds();
-  seconds = timer.getSeconds();
-  minutes = timer.getMinutes();
-  hours = timer.getUTCHours();
-
-  if (milliseconds < 100) {
-      milliseconds = '0' + milliseconds;
-  }
-  if (seconds < 10) {
-      seconds = '0' + seconds;
-  }
-  if (minutes < 10) {
-      minutes = '0' + minutes;
-  }
-  if (hours < 10) {
-      hours = '0' + hours;
-  }
-}
-
-//отображаем таймер
-function counter() {
-  getTime();
-  mil.innerHTML = milliseconds;
-  sec.innerHTML = seconds;
-  min.innerHTML = minutes;
-  hours.innerHTML = hours;
-}
-
-// интервал для показа
-function displayTimer() {
-  timerId = setInterval(counter, 1);
-}
-
-//пауза
 function pauseTimer() {
   clearInterval(timerId);
-  getTime();
-  flag = true;
-}
-
-// показываем-прячем кнопки старт/стоп
-function displayBtnPause() {
-  start.style.display = 'none';
-  pause.style.display = 'block';
-}
-
-function displayBtnStart() {
+  startStopDefine = false;
   start.style.display = 'block';
   pause.style.display = 'none';
 }
 
-// сброс таймера
 function clearTimer() {
-  flag = false;
-  clearInterval(timerId);
   start.style.display = 'block';
   pause.style.display = 'none';
-  mil.innerHTML = '000';
-  min.innerHTML = '00';
-  sec.innerHTML = '00';
+  clearInterval(timerId);
+  startStopDefine = 0;
+  counter = 0;
+  millisecs.innerHTML = '000';
+  secs.innerHTML = '00';
+  mins.innerHTML = '00';
+  hours.innerHTML = '00';
 }
 
 start.addEventListener('click', startTimer);
-start.addEventListener('click', displayBtnPause);
-start.addEventListener('click', displayTimer);
-
-pause.addEventListener('click', pauseTimer)
-pause.addEventListener('click', displayBtnStart);
-
 clear.addEventListener('click', clearTimer);
+pause.addEventListener('click', pauseTimer);
