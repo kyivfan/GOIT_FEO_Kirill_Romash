@@ -4,34 +4,34 @@
 }
 
 body {
-width: 741px;
-height: 1200px;
-margin: 0 auto;
-padding-top: 100px;
-background: #777;
+  width: 741px;
+  height: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  background: #777;
 }
 
 .carousel-hider {
-    width: 600px;
-    overflow: hidden;
-    float: left;
+  width: 600px;
+  overflow: hidden;
+  float: left;
 }
 
 .carousel-list {
-    list-style: none;
-    width: 10000px;
-    padding: 0px;
-    position: relative;
+  list-style: none;
+  width: 10000px;
+  padding: 0px;
+  position: relative;
 }
 
 .carousel-element {
-    display: block;
-    margin-right: 25px;
-    float: left;
+  display: block;
+  margin-right: 25px;
+  float: left;
 }
 
 .carousel-element img {
-    max-width: 100px;
+  max-width: 100px;
 }
 
 .carousel-element p {
@@ -41,32 +41,32 @@ background: #777;
 }
 
 .carousel-arrow-left, .carousel-arrow-right {
-    float: left;
-    display: block;
-    border: 1px solid grey;
-    background-color: #eaaa19;
-    padding: 5px;
-    margin-top: 50px;
-    font-family: Tahoma;
+  float: left;
+  display: block;
+  border: 1px solid grey;
+  background-color: #eaaa19;
+  padding: 5px;
+  margin-top: 50px;
+  font-family: Tahoma;
 }
 
 .carousel-arrow-left:hover, .carousel-arrow-right:hover {
-    cursor: pointer;
-    background-color: #ece624;
+  cursor: pointer;
+  background-color: #ece624;
 }
 
 .carousel-arrow-left {
-    margin-right: 25px;
+  margin-right: 25px;
 }
 
 .carousel-arrow-right {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .clearfix {
-    display: block;
-    content: '';
-    clear: both;
+  display: block;
+  content: '';
+  clear: both;
 }
 
 .profile {

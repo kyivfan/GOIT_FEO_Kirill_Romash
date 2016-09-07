@@ -10,17 +10,16 @@ $(function () {
 
 var html = $('#page').html();
 
-
 var myProfile = [
   {
     title: 'Ромаш Кирилл Владимирович',
     content: 'экс-банкир, студент Go IT'
   },
   {
-		title: 'Учу фронтенд потому что:',
-		reason1: 'это интересно',
-		reason2: 'хочу освоить новую профессию',
-		reason3: 'хочу писать сайты'
+    title: 'Учу фронтенд потому что:',
+    reason1: 'это интересно',
+    reason2: 'хочу освоить новую профессию',
+    reason3: 'хочу писать сайты'
   },
   {
     title: 'Мой контактный телефон',
@@ -29,8 +28,7 @@ var myProfile = [
   {
     title: 'Мой профайл в Facebook',
     link: 'facebook.com/KirillRomash'
-  },
-
+  }
 ];
 
 var content = tmpl(html, {
