@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <title>Test_with_results_HT_13_14_JS</title>
+</head>
+<body>
+<script type="text/html" id="test_tmpl">
+  <form action="#">
+    <h1><%=title %></h1>
+      <% for(var i=0;i<questions.length;i++){%>
+        <li><%=questions[i]%></li>
+        <ol>
+          <% for(var j=0;j<answers[i].length;j++){%>
+          <li id=a<%=i%><%=j%>><input type = radio name = a<%=i%>><%=answers[i][j]%></li>
+          <% } %>
+        </ol>
+      <% } %>
+      <input type="submit" id="checkres" value="Check my results" >
+  </form>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/tmpl.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
