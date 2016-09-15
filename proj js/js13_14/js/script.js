@@ -6,9 +6,9 @@ var progTest = {
     title: 'Programming test',
     questions: ['Who are you?','What does JS mean?','Why go FrontEnd?'],
     answers: [['GOiT Student', 'Dog, name = Jack', 'Boss'],
-    ['JavaScript', 'JabaSprint', 'I Dont know'],
-    ['I want to create sites', 'I like music', 'I am genious of programming']],
-    true: [0,0,0]
+    ['JabaSprint', 'JavaScript', 'I Dont know'],
+    ['I want to create sites', 'I like music', 'I am genius of programming']],
+    correctAnswers: [0,1,0]
 };
 
 // write data to-, and read it from localStorage:
@@ -21,10 +21,27 @@ console.log(storageTestObj);
 // template rendering
 var html = $(test_tmpl).html();
 var content = tmpl(html, storageTestObj);
-$('body').append(content);
+$('.wrapper').append(content);
 
-//check answers
-$(checkres).click(function () {console.log('check', checkres);
-if($("#answers input:checked").each(function() { console.log(this);})
-else {console.log('wrong')};
+// check unswers and show result
+$(checkres).click(function() {
+  if($("#a00 input:checked").length==1 && $("#a11 input:checked").length==1 && $("#a20 input:checked").length==1)
+    {$(result).append('Gongratulations! You passed the test');
+     clearForm("quiz");
+  } else {$(result).append('Sorry, you answers are incorrect. Try again');
+          clearForm("quiz");
+    }
 });
+
+// clear answers in form
+function clearForm(name) {
+  var delAnswer = $('input:checked');
+  for (var i = 0; i < delAnswer.length; i++) {
+        delAnswer[i].checked = false;
+      }
+};
+
+//clear modal window content????????????
+// $(checkres).on('hidden', function() {
+//    $(result).html('');
+// })

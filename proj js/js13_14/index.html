@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link type="text/css" rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
   <title>Test_with_results_HT_13_14_JS</title>
 </head>
 <body>
+  <div class="wrapper">
 <script type="text/html" id="test_tmpl">
-  <form action="#">
+  <form id="quiz" action="#">
     <h1><%=title %></h1>
       <% for(var i=0;i<questions.length;i++){%>
         <li><%=questions[i]%></li>
@@ -19,10 +25,21 @@
           <% } %>
         </ol>
       <% } %>
-      <input type="submit" id="checkres" value="Check my results" >
+      <button type="button" id="checkres" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Check my results</button>
+      <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <span id="info"><br>Test results:<br><br>
+              <p id="result"></p>
+            </span>
+          </div>
+        </div>
+      </div>
   </form>
 </script>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/tmpl.js"></script>
 <script src="js/script.js"></script>
 </body>
