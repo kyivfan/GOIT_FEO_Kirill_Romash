@@ -24,11 +24,11 @@ var content = tmpl(html, storageTestObj);
 $('.wrapper').append(content);
 
 // check unswers and show result
-$(checkres).click(function() {
+$("#checkres").click(function() {
   if($("#a00 input:checked").length==1 && $("#a11 input:checked").length==1 && $("#a20 input:checked").length==1)
-    {$(result).append('Gongratulations! You passed the test');
+    {$("#result").html('Gongratulations! You passed the test');
      clearForm("quiz");
-  } else {$(result).append('Sorry, you answers are incorrect. Try again');
+  } else {$("#result").html('Sorry, you answers are incorrect. Try again');
           clearForm("quiz");
     }
 });
@@ -41,7 +41,4 @@ function clearForm(name) {
       }
 };
 
-//clear modal window content????????????
-// $(checkres).on('hidden', function() {
-//    $(result).html('');
-// })
+localStorage.clear();
