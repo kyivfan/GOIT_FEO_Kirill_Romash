@@ -1,0 +1,45 @@
+//переменные:
+$font-stack:      Helvetica, sans-serif;
+$primary-color:   #333;
+$green:           green;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@import 'variables';
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+//вложенности:
+.menu {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  display: block;
+  border: 2px solid black;
+  @include border-radius(10px);
+
+  li {
+    float: left;
+    list-style: none;
+    padding: 20px;
+  }
+  a {
+    color: $green;
+  }
+}
