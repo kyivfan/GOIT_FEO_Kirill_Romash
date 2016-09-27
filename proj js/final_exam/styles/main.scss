@@ -1,0 +1,371 @@
+@import './reset';
+@import './variables';
+@import './mixins';
+
+@import './style';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@font-face {
+  font-family: 'Montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat-regular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+    src: url('../fonts/Roboto-light.ttf');
+    font-weight: normal;
+}
+
+
+
+
+@media (max-width: 320px) {
+
+body {
+  max-width: 320px;
+  height: 3905px;
+
+  h1 {
+    display: block;
+    height: 35px;
+    width: 100%;
+    font-family: 'Montserrat-bold';
+    font-size: 22px;
+  }
+
+  .clearfix {
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  .header {
+  width: 320px;
+  height: 540px;
+  background: url('../img/block1.jpg') no-repeat center;
+
+    .login {
+      height: 66px;
+      width: 200px;
+      padding: 0 60px;
+      opacity: 1;
+      display: block;
+      float: left;
+
+      .login_button {
+        display: block;
+        float: left;
+        margin-top:21px;
+        height: 36px;
+        width: 87px;
+        background: rgba(255, 255, 255, 0);
+        border: rgba(255, 255, 255, 0.5);
+        border-radius: 16px 16px;
+        color: white;
+        outline: none;
+        text-align: center;
+        font-family: 'Montserrat-bold';
+        font-size: 14px;
+      }
+
+      .login_button:active,
+      .login_button:focus,
+      .login_button:hover {
+        border: 2px solid white;
+        border-radius: 16px 16px;
+        outline: none;
+        background: rgba(255, 255, 255, 0);
+        cursor:pointer;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+    .header_textblock {
+      display: block;
+      padding-top: 86px;
+      height: 277px;
+      width: 320px;
+      text-align: center;
+      color: #f6f6f6;
+    }
+
+    .header_button {
+      display: block;
+      margin: 0 auto;
+      height: 40px;
+      width: 280px;
+      background: #fe4e50;
+      color: #f8ffff;
+      font-family: 'Montserrat-bold';
+      font-size: 14px;
+      border: none;
+      border-radius: 20px 20px;
+    }
+
+    .header_button:focus,
+    .header_button:active,
+    .header_button:hover {
+      outline: none;
+      background: #d96769;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-top: 6px;
+    }
+
+    h2 {
+        padding-top: 87px;
+        font-size: 21px;
+    }
+
+    h5 {
+      margin-top: 11px;
+      font-family: Tahoma, sans-serif;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+
+  .sectionhigh {
+    width: 320px;
+    height: 814px;
+    padding-top: 35px;
+
+    h1 {
+      margin: 0 16px;
+    }
+
+    .steps {
+      width: 300px;
+      height: 740px;
+      margin: 0 auto;
+
+      .step_item {
+        width: 300px;
+        height: 240px;
+        margin: 9px 0;
+
+      }
+
+      .step1 {
+        background: url('../img/block2.jpg') no-repeat bottom;
+
+      }
+
+      .step2{
+        background: url('../img/block3.jpg') no-repeat center;
+      }
+
+      .step3{
+        background: url('../img/block4.jpg') no-repeat center;
+      }
+
+      .step_wrapper {
+        background-color: rgba(0,0,0,0.25);
+        height: 100%;
+        width: 100%;
+      }
+
+      .step_content {
+        display: block;
+        float: left;
+        position: relative;
+        margin: 20px;
+        height: 200px;
+        width: 260px;
+        color: #f6f6f6;
+      }
+
+      .step_button {
+        height: 20px;
+        width: 70px;
+        border-radius: 10px 10px;
+        background: #fe4e50;
+        color: #f8ffff;
+        border: none;
+        font-family: 'Montserrat-regular';
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin: 49px 0 0 3px;
+      }
+
+      .button2 {
+        margin: 80px 0 0 3px;
+      }
+
+      .step_button:focus,
+      .step_button:active,
+      .step_button:hover {
+        background: #d96769;
+        outline: none;
+        cursor: pointer;
+      }
+
+      h1 {
+        margin: 14px 0 0;
+        font-size: 24px;
+      }
+
+      span {
+        font-family: 'Roboto';
+        font-size: 14px;
+        position:absolute;
+        bottom:0;
+        line-height: 15px;
+      }
+    }
+  }
+
+  .sectionmiddle {
+    width: 320px;
+    height: 1100px;
+
+    h1 {
+      text-align: center;
+    }
+
+    .partners {
+      height: 940px;
+      border: 1px solid blue;
+      margin-top: 32px;
+
+      .partners_item {
+        height: 232px;
+        border: 1px solid gray;
+      }
+
+      .partners_photo {
+        height: 124px;
+        width: 320px;
+      }
+
+      .photo1 {
+        background: url('../img/ava1.png') no-repeat center;
+      }
+
+      .photo2 {
+        background: url('../img/ava2.png') no-repeat center;
+      }
+      .photo3 {
+        background: url('../img/ava3.png') no-repeat center;
+      }
+      .photo4 {
+        background: url('../img/ava4_1.png') no-repeat center;
+      }
+
+      .partners_info {
+        height: 106px;
+        width: 320px;
+      }
+    }
+
+    .otherpartners {
+      height: 100px;
+      width: 320px;
+      padding: 20px;
+      border: 1px solid brown;
+      box-sizing: border-box;
+    }
+  }
+
+  .sectionlow {
+    height: 1100px;
+    width: 320px;
+
+    .activities {
+      height: 910px;
+      width: 320px;
+
+      .grid-item {
+        margin: 10px auto 0;
+        width: 300px;
+        height: 120px;
+        background: #D26;
+        border: 2px solid #333;
+        border-color: hsla(0, 0%, 0%, 0.5);
+        border-radius: 5px;
+      }
+
+      .grid1 {
+        background: url('../img/sport.jpg') no-repeat center;
+      }
+
+      .grid2 {
+        background: url('../img/wellness.jpg') no-repeat center;
+      }
+
+      .grid3 {
+        background: url('../img/extreme.jpg') no-repeat center;
+      }
+
+      .grid4 {
+        background: url('../img/games.jpg') no-repeat center;
+      }
+
+      .grid5 {
+        background: url('../img/culture.jpg') no-repeat center;
+      }
+
+      .grid6 {
+        background: url('../img/relax.jpg') no-repeat center;
+      }
+
+      .grid7 {
+        background: url('../img/travelling.jpg') no-repeat center;
+      }
+    }
+  }
+
+
+
+
+
+
+  .footer {
+    height: 192px;
+    width: 320px;
+    border-top: 3px solid red;
+
+    .sitemap {
+      ul {
+      display: block;
+      list-style-type: none;
+      }
+
+      li {
+        display: block;
+        float: left;
+      }
+    }
+
+    .logo {
+      height: 24px;
+      width: 112px;
+      background: url('../img/areto.png') no-repeat center;
+    }
+  }
+
+}
+
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) {
+
+}
