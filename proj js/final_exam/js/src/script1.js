@@ -1,3 +1,5 @@
+$(function() {
+
 $('.grid').masonry({
   // options
   itemSelector: '.grid-item',
@@ -5,5 +7,4 @@ $('.grid').masonry({
   gutter: 1
 });
 
-
-console.log('this is my script 1');
+});
