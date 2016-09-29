@@ -146,7 +146,7 @@ body {
       .step_item {
         width: 300px;
         height: 240px;
-        margin: 9px 0;
+        margin: 7px 0 9px;
 
       }
 
@@ -205,7 +205,7 @@ body {
       }
 
       h1 {
-        margin: 14px 0 0;
+        margin: 15px 0 0;
         font-size: 24px;
       }
 
@@ -244,6 +244,26 @@ body {
         width: 123px;
         margin: 0px auto;
         background: url('../img/sprite.png');
+        position: relative;
+
+        .partners_icon {
+          position: absolute;
+          top: 86px;
+          left: 83px;
+          height: 43px;
+          width: 43px;
+          background: url('../img/sprite_mini.png');
+        }
+
+          .icon1 {
+          background-position: 0px 0px}
+          .icon2 {
+          background-position: 0px -229px}
+          .icon3 {
+          background-position: 0px -491px}
+          .icon4 {
+          background-position: 0px -719px}
+
       }
 
       .photo1 {
@@ -307,7 +327,6 @@ body {
       .see:active,
       .see:hover {
         outline: none;
-        background: #fff;
         cursor: pointer;
       }
     }
@@ -339,37 +358,45 @@ body {
 
       .grid1 {
         background: url('../img/sport.jpg') no-repeat center;
+        background-position: -3px -31px;
       }
 
       .grid2 {
         background: url('../img/wellness.jpg') no-repeat center;
+        background-position: -1px -125px;
       }
 
       .grid3 {
         background: url('../img/extreme.jpg') no-repeat center;
         line-height: 58px;
+        background-position: -8px -86px;
       }
 
       .grid4 {
         background: url('../img/games.jpg') no-repeat center;
+        background-position: -9px -148px;
       }
 
       .grid5 {
         background: url('../img/culture.jpg') no-repeat center;
+        background-position: 0px -51px;
       }
 
       .grid6 {
         background: url('../img/relax.jpg') no-repeat center;
+        background-position: -9px -30px;
       }
 
       .grid7 {
         background: url('../img/travelling.jpg') no-repeat center;
-        margin-bottom: 20px;
+        background-position: -9px -69px;
       }
     }
 
     .search {
       margin: 28px auto;
+      height: 204px;
+
 
       h2 {
         margin-top: 6px;
@@ -378,43 +405,101 @@ body {
         text-align: center;
       }
 
-    
-    }
+      input[type='text'] {
+        box-sizing: border-box;
+        padding-left: 14px;
+        height: 40px;
+        margin: 15px 19px 12px;
+        width: 280px;
+        border: 1px solid #9ba1a3;
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 400;
+        vertical-align: middle;
+        border-radius: 3px 3px;
+      }
 
+      .search_button {
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        width: 280px;
+        background: #fe4e50;
+        color: #f8ffff;
+        font-family: 'Montserrat-bold';
+        font-size: 14px;
+        border: none;
+        border-radius: 20px 20px;
+      }
 
+      .search_button:focus,
+      .search_button:active,
+      .search_button:hover {
+        outline: none;
+        background: #d96769;
+        cursor: pointer;
+      }
   }
-
-
-
-
-
 
   .footer {
     height: 192px;
     width: 320px;
-    border-top: 3px solid red;
+    border-top: 4px solid #ff4e50;
+    text-align: center;
+
+    h2 {
+      font-size: 17px;
+      font-family: 'Montserrat-bold';
+      height: 46px;
+      line-height: 50px;
+      color: #ff4e50;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-family: 'Montserrat-bold';
+    }
 
     .sitemap {
-      ul {
-      display: block;
-      list-style-type: none;
-      }
+      height: 18px;
+      margin: 0 53px 12px;
 
-      li {
+      .sitemap_list {
+        margin: 0 auto;
+        display: block;
+        list-style-type: none;
+
+        li {
         display: block;
         float: left;
+        margin: 0 10px 0;
+
+          a {
+            text-decoration: none;
+            color: #666;
+            font-family: 'Roboto';
+            font-size: 12px;
+          }
+        }
       }
     }
 
+    h4 {
+      font-size: 10px;
+      font-family: 'Montserrat-bold';
+      letter-spacing: 1px;
+      color: #666;
+      margin: 13px auto 9px;
+    }
+
     .logo {
+      margin: 0 auto;
       height: 24px;
       width: 112px;
       background: url('../img/areto.png') no-repeat center;
     }
   }
-
-}
-
+}}
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
