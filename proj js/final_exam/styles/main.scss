@@ -1,9 +1,11 @@
-@import './reset';
-@import './variables';
-@import './mixins';
-
-@import './style';
-
+@import 'variables';
+//переменные:
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
 * {
   margin: 0;
   padding: 0;
@@ -27,14 +29,12 @@
     font-weight: normal;
 }
 
-
-
-
 @media (max-width: 320px) {
 
 body {
   max-width: 320px;
   height: 3905px;
+
 
   h1 {
     display: block;
@@ -54,6 +54,7 @@ body {
   width: 320px;
   height: 540px;
   background: url('../img/block1.jpg') no-repeat center;
+  border-radius: 2px 2px;
 
     .login {
       height: 66px;
@@ -231,7 +232,7 @@ body {
 
   .sectionmiddle {
     width: 320px;
-    height: 1100px;
+    height: 1090px;
 
     h1 {
       text-align: center;
@@ -239,45 +240,87 @@ body {
 
     .partners {
       height: 940px;
-      border: 1px solid blue;
       margin-top: 32px;
 
       .partners_item {
-        height: 232px;
-        border: 1px solid gray;
+        height: 229px;
+      }
+
+      .partner3 {
+        margin-top: 33px;
       }
 
       .partners_photo {
-        height: 124px;
-        width: 320px;
+        height: 123px;
+        width: 123px;
+        margin: 0px auto;
+        background: url('../img/sprite.png');
       }
 
       .photo1 {
-        background: url('../img/ava1.png') no-repeat center;
+        background-position: 0px 0px;
       }
 
       .photo2 {
-        background: url('../img/ava2.png') no-repeat center;
+        background-position: 0px -228px;
       }
+
       .photo3 {
-        background: url('../img/ava3.png') no-repeat center;
+        background-position: 0px -491px;
       }
+
       .photo4 {
-        background: url('../img/ava4_1.png') no-repeat center;
+        background-position: 0px -719px;
       }
 
       .partners_info {
-        height: 106px;
+        height: 100px;
         width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 14px;
+
+        .partners_name {
+          font-family: 'Montserrat-bold';
+          font-size: 14px;
+          margin-top: 3px;
+        }
+        .partners_text {
+          font-family: 'Roboto';
+          font-size: 14px;
+          margin-top: 11px;
+          line-height: 17px;
+        }
       }
     }
 
     .otherpartners {
-      height: 100px;
+      height: 60px;
       width: 320px;
-      padding: 20px;
-      border: 1px solid brown;
-      box-sizing: border-box;
+      padding-top: 10px;
+
+      .see {
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        width: 280px;
+        background: #fff;
+        color: #ff4e50;
+        font-family: 'Montserrat-bold';
+        font-size: 14px;
+        border: 1px solid #ff4e50;
+        border-radius: 20px 20px;
+      }
+
+      .see:focus,
+      .see:active,
+      .see:hover {
+        outline: none;
+        background: #fff;
+        cursor: pointer;
+      }
     }
   }
 
@@ -285,6 +328,10 @@ body {
     height: 1100px;
     width: 320px;
 
+    h1 {
+    text-align: center;
+    height: 55px;
+    }
     .activities {
       height: 910px;
       width: 320px;
@@ -292,11 +339,13 @@ body {
       .grid-item {
         margin: 10px auto 0;
         width: 300px;
-        height: 120px;
-        background: #D26;
-        border: 2px solid #333;
-        border-color: hsla(0, 0%, 0%, 0.5);
+        height: 121px;
         border-radius: 5px;
+        text-align: center;
+        line-height: 120px;
+        font-size: 22px;
+        color: #f6f6f6;
+        font-family: 'Montserrat-bold';
       }
 
       .grid1 {
@@ -309,6 +358,7 @@ body {
 
       .grid3 {
         background: url('../img/extreme.jpg') no-repeat center;
+        line-height: 58px;
       }
 
       .grid4 {
@@ -325,8 +375,24 @@ body {
 
       .grid7 {
         background: url('../img/travelling.jpg') no-repeat center;
+        margin-bottom: 20px;
       }
     }
+
+    .search {
+      margin: 28px auto;
+
+      h2 {
+        margin-top: 6px;
+        font-family: 'Roboto';
+        font-size: 18px;
+        text-align: center;
+      }
+
+    
+    }
+
+
   }
 
 

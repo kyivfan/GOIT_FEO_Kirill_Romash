@@ -1,15 +1,15 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    /*concat_css: {
+    concat_css: {
       options: {
         separator: ''
       },
       dist: {
         src: ['styles/variables.scss','styles/mixins.scss','styles/reset.scss','styles/style.scss'],
-        dest: 'build/main.scss'
+        dest: 'styles/main.scss'
       }
-    },*/
+    },
     concat: {
       options: {
         separator: ';'
@@ -46,33 +46,40 @@ module.exports = function(grunt) {
         }]
       }
     },
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
-      },
-      dist: {
-        files: {
-          'build/main.css': 'build/main.prefixed.css'
-        }
-      }
-    },
+    // autoprefixer: {
+    //   options: {
+    //     browsers: ['IE 8', 'ie 9', 'last 2 versions' ]
+    //   },
+    //   dist: {
+    //     files: {
+    //        src: 'build/*.css',
+    //       }
+    //   }
+    // },
     watch : {
+      options: {
+        livereload: true,
+      },
       sass: {
         files: ['styles/*.scss'],
         tasks: ['concat','sass'],
       },
+      scripts: {
+        files: ['js/src/*.js'],
+        tasks: ['concat']
+      }
+
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  //grunt.loadNpmTasks('grunt-concat-css');
+  grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  // grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['concat','uglify','sass','imagemin','autoprefixer','watch']);
-
-
+  grunt.registerTask('default', ['concat','concat_css','uglify','sass','imagemin','watch']);
+// 'autoprefixer'
 };

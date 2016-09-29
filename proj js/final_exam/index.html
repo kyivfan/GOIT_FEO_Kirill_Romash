@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
-  <script src="js/dist/masonry.pkgd.min.js"></script>
+  <script src="js/src/masonry.pkgd.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="js/dist/script.main.js"></script>
-  <link rel="stylesheet" href="styles/main.css">
+  <script src="build/script.main.js"></script>
+  <link rel="stylesheet" href="build/main.css">
+
 </head>
 <body>
 <header class="header">
@@ -63,7 +64,7 @@
     <div class="partners_item partner1">
       <div class="partners_photo photo1"></div>
       <div class="partners_info">
-        <h2>Bradley Hunter</h2>
+        <div class="partners_name">Bradley Hunter</div>
         <div class="partners_text">
           Based in Chicago. I love playing tennis<br> and loud music.
         </div>
@@ -72,7 +73,7 @@
     <div class="partners_item partner2">
       <div class="partners_photo photo2"></div>
       <div class="partners_info">
-        <h2>Lucas Marsha</h2>
+        <div class="partners_name">Lucas Marsha</div>
         <div class="partners_text">
           I get my inspiration from nature<br> and objects around me. I have a<br> passion to colours, typography and<br> skateboards.
         </div>
@@ -81,7 +82,7 @@
     <div class="partners_item partner3">
       <div class="partners_photo photo3"></div>
       <div class="partners_info">
-        <h2>Heather Walker</h2>
+        <div class="partners_name">Heather Walker</div>
         <div class="partners_text">
           I'm a happy person that loves cats<br> and climbing on mountains.
         </div>
@@ -90,7 +91,7 @@
     <div class="partners_item partner4">
       <div class="partners_photo photo4"></div>
       <div class="partners_info">
-        <h2>Bradley Hunter</h2>
+        <div class="partners_name">Bradley Hunter</div>
         <div class="partners_text">
           Based in Chicago. I love playing tennis<br> and loud music.
         </div>
@@ -105,19 +106,20 @@
   <h1>Discover holiday activity<br>
   ideas</h1>
   <div class="activities">
-    <div class="grid data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }">
-    <div class="grid-item grid1">Sport</div>
-    <div class="grid-item grid2">Wellness</div>
-    <div class="grid-item grid3">Extreme</div>
+    <div class="grid">
+    <div class="grid-item grid1">Sport and Activity</div>
+    <div class="grid-item grid2">Wellness and Health</div>
+    <div class="grid-item grid3">Extreme Sports and Expeditions</div>
     <div class="grid-item grid4">Games</div>
-    <div class="grid-item grid5">Culture</div>
-    <div class="grid-item grid6">Relax</div>
+    <div class="grid-item grid5">Culture and Education</div>
+    <div class="grid-item grid6">Relaxation</div>
     <div class="grid-item grid7">Travelling</div>
     </div>
   </div>
+  <div class="search">
   <h1>Discover holiday activity<br>
   ideas</h1>
-  <div class="search">
+  <h2>Hi! What are your holiday interests?</h2>
     <form action="#" class="interests">
       <input type="text" placeholder="Enter your interests">
     </form>
@@ -138,13 +140,7 @@
   <h3>Partners</h3><br>
   <h2>DESIGNED BY</h2>
   <div class="logo"></div>
-
-
-
-
-
-
 </footer>
-
+<!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 </html>
