@@ -37,10 +37,11 @@ $main-color: #fff;
     font-weight: normal;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
 
 body {
-  max-width: 320px;
+  min-width: 320px;
+  max-width: 480px;
   height: 3905px;
 
 
@@ -59,18 +60,24 @@ body {
   }
 
   .header {
-  width: 320px;
+  min-width: 320px;
   height: 540px;
   background: url('../img/block1.jpg') no-repeat center;
+  background-size: 100%;
   @include border-radius(2px 2px);
 
     .login {
-      height: 66px;
-      width: 200px;
-      padding: 0 60px;
+      height: 222px;
+      width: 100%;
       opacity: 1;
       display: block;
       float: left;
+
+      .button_wrapper {
+        height: 76px;
+        width: 180px;
+        margin: 0 auto;
+      }
 
       .login_button {
         display: block;
@@ -98,13 +105,26 @@ body {
         cursor:pointer;
         transition: all 0.3s ease-in;
       }
+
+      .title_wrapper {
+        width: 100%;
+        text-align: center;
+      }
+
+      .header_title {
+        padding-top: 94px;
+        font-size: 21px;
+        font-family: "Montserrat-bold";
+        color: #fff;
+        text-align: center;
+      }
     }
 
     .header_textblock {
       display: block;
-      padding-top: 86px;
-      height: 277px;
-      width: 320px;
+      padding-top: 215px;
+      height: 148px;
+      width: 100%;
       text-align: center;
       color: $main-color;
     }
@@ -135,13 +155,10 @@ body {
       margin-top: 6px;
     }
 
-    h2 {
-        padding-top: 87px;
-        font-size: 21px;
-    }
-
     h5 {
-      margin-top: 11px;
+      text-align: center;
+      width: 224px;
+      margin: 11px auto;
       font-family: Tahoma, sans-serif;
       font-size: 18px;
       font-weight: normal;
@@ -149,18 +166,24 @@ body {
   }
 
   .sectionhigh {
-    width: 320px;
+    max-width: 480px;
     height: 814px;
-    padding-top: 35px;
+    padding-top: 34px;
 
-    h1 { margin: 0 16px; }
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+      width: 90%;
+    }
 
     .steps {
       width: 300px;
       height: 740px;
       margin: 0 auto;
+      list-style-type:none;
 
       .step_item {
+        display: block;
         width: 300px;
         height: 240px;
         margin: 7px 0 9px;
@@ -214,6 +237,7 @@ body {
       h1 {
         margin: 15px 0 0;
         font-size: 24px;
+        text-align: left;
       }
 
       span {
@@ -227,10 +251,14 @@ body {
   }
 
   .sectionmiddle {
-    width: 320px;
+    max-width: 480px;
     height: 1090px;
 
-    h1 { text-align: center; }
+    h1 {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
     .partners {
       height: 940px;
@@ -272,8 +300,8 @@ body {
       .photo4 {background-position: 0px -719px;}
 
       .partners_info {
-        height: 100px;
-        width: 320px;
+        height: 90px;
+        max-width: 480px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -283,12 +311,14 @@ body {
         .partners_name {
           font-family: $font-headers-bold;
           font-size: 14px;
-          margin-top: 3px;
+          margin: 3px auto 0;
         }
+
         .partners_text {
+          width: 234px;
           font-family: $font-stack;
           font-size: 14px;
-          margin-top: 11px;
+          margin: 11px auto 0;
           line-height: 17px;
         }
       }
@@ -296,7 +326,7 @@ body {
 
     .otherpartners {
       height: 60px;
-      width: 320px;
+      max-width: 480px;
       padding-top: 10px;
 
       .see {
@@ -323,7 +353,7 @@ body {
 
   .sectionlow {
     height: 1100px;
-    width: 320px;
+    max-width: 480px;
 
     h1 {
     text-align: center;
@@ -332,22 +362,39 @@ body {
 
     .activities {
       height: 910px;
-      width: 320px;
+      max-width: 480px;
 
       .grid {
-        margin: 0 10px;
+        width: 300px;
+        margin: 0 auto;
       }
 
       .grid-item {
-        margin: 10px auto 0;
+        margin: 11px auto 0;
         width: 300px;
-        height: 121px;
+        height: 120px;
         @include border-radius(5px);
-        text-align: center;
-        line-height: 120px;
-        font-size: 22px;
         color: $main-color;
         font-family: $font-headers-bold;
+
+        img {
+          width: 300px;
+          height: 120px;
+          @include border-radius(5px);
+        }
+
+        h2 {
+          position: absolute;
+          top:33%;
+          left:12%;
+          font-size: 20px;
+          text-align: center;
+          width: 76%;
+          height: 24px;
+          color: $main-color;
+          overflow: hidden;
+
+        }
       }
 
       .grid1 {
@@ -392,17 +439,18 @@ body {
       height: 204px;
 
       h2 {
-        margin-top: 6px;
+        margin-top: 7px;
         font-family: $font-stack;
         font-size: 18px;
         text-align: center;
       }
 
       input[type='text'] {
+        display: block;
         box-sizing: border-box;
         padding-left: 14px;
         height: 40px;
-        margin: 15px 19px 12px;
+        margin: 15px auto 12px;
         width: 280px;
         border: 1px solid #9ba1a3;
         font-family: $font-stack;
@@ -437,7 +485,7 @@ body {
 
   .footer {
     height: 192px;
-    width: 320px;
+    width: 100%;
     border-top: 4px solid $button-color;
     text-align: center;
 
@@ -456,7 +504,8 @@ body {
 
     .sitemap {
       height: 18px;
-      margin: 0 53px 12px;
+      margin: 0 auto 13px;
+      width: 214px;
 
       .sitemap_list {
         margin: 0 auto;
@@ -496,7 +545,7 @@ body {
 }
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
 
   body {
     max-width: 768px;
@@ -505,10 +554,8 @@ body {
 
     h1 {
       display: block;
-      height: 35px;
       width: 100%;
       font-family: $font-headers-bold;
-      font-size: 22px;
     }
 
     .clearfix {
@@ -524,42 +571,68 @@ body {
     @include border-radius(2px 2px);
 
       .login {
-        height: 66px;
+        height: 76px;
         width: 100%;
         opacity: 1;
 
-        .login_button {
-          display: block;
-          float: left;
-          margin-top:21px;
-          height: 36px;
-          width: 87px;
-          background: rgba(255, 255, 255, 0);
-          border: rgba(255, 255, 255, 0.5);
-          @include border-radius(16px 16px);
-          color: $main-color;
-          outline: none;
-          text-align: center;
-          font-family: $font-headers-bold;
-          font-size: 14px;
+        .button_wrapper {
+          float: right;
+          width: 50%;
+          height: 76px;
+
+          .container {
+            float: right;
+            height: 76px;
+            margin-right: 13%;
+          }
+
+          .login_button {
+            display: block;
+            float: left;
+            margin-top:38px;
+            height: 36px;
+            width: 87px;
+            background: rgba(255, 255, 255, 0);
+            border: rgba(255, 255, 255, 0.5);
+            @include border-radius(16px 16px);
+            color: $main-color;
+            outline: none;
+            text-align: center;
+            font-family: $font-headers-bold;
+            font-size: 14px;
+          }
+
+          .login_button:active,
+          .login_button:focus,
+          .login_button:hover {
+            border: 2px solid $main-color;
+            @include border-radius(16px 16px);
+            outline: none;
+            background: rgba(255, 255, 255, 0);
+            cursor:pointer;
+            transition: all 0.3s ease-in;
+          }
         }
 
-        .login_button:active,
-        .login_button:focus,
-        .login_button:hover {
-          border: 2px solid $main-color;
-          @include border-radius(16px 16px);
-          outline: none;
-          background: rgba(255, 255, 255, 0);
-          cursor:pointer;
-          transition: all 0.3s ease-in;
+        .title_wrapper {
+          width: 50%;
+          height: 76px;
+        }
+
+        .header_title {
+          padding:44px 51px;
+          font-size: 21px;
+          font-family: "Montserrat-bold";
+          color: #fff;
+          height: 76px;
+
         }
       }
 
       .header_textblock {
         display: block;
-        padding-top: 86px;
-        height: 277px;
+        padding-top: 140px;
+        height: 210px;
         max-width: 768px;
         text-align: center;
         color: $main-color;
@@ -569,7 +642,7 @@ body {
         display: block;
         margin: 0 auto;
         height: 40px;
-        width: 280px;
+        width: 224px;
         background: $button-color;
         color: $main-color;
         font-family: $font-headers-bold;
@@ -587,39 +660,42 @@ body {
       }
 
       h1 {
-        font-size: 30px;
-        margin-top: 6px;
-      }
-
-      h2 {
-          padding-top: 87px;
-          font-size: 21px;
+        margin-top: 50px;
+        height: 112px;
+        font-size: 51px;
+        letter-spacing: 0.4px;
+        max-width: 480px;
+        margin: 0 auto;
+        overflow: hidden;
       }
 
       h5 {
-        margin-top: 11px;
         font-family: Tahoma, sans-serif;
-        font-size: 18px;
+        font-size: 23px;
         font-weight: normal;
       }
     }
 
     .sectionhigh {
-      width: 320px;
+      max-width: 768px;
       height: 814px;
       padding-top: 35px;
 
       h1 { margin: 0 16px; }
 
       .steps {
-        width: 300px;
+        max-width: 768px;
         height: 740px;
         margin: 0 auto;
+        list-style-type: none;
+        float: left;
 
         .step_item {
-          width: 300px;
-          height: 240px;
-          margin: 7px 0 9px;
+          display: block;
+          float: left;
+          max-width: 234px;
+          height: 400px;
+          margin: 7px 5px 9px;
         }
 
         .step1 { background: url('../img/block2.jpg') no-repeat bottom; }

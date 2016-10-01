@@ -76,10 +76,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-concat-css');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  // grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   // grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['concat','concat_css','uglify','sass','imagemin','watch']);
+  grunt.registerTask('default', ['concat','concat_css','uglify','sass','imagemin']);
 // 'autoprefixer'
 };
