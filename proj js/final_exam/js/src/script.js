@@ -1,16 +1,16 @@
 $(function() {
 
   $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 300,
-    gutter: 1
+    itemSelector: '.grid_item',
+    columnWidth: 1,
+    gutter: 10
   });
 
   function successCall(obj) {
-      var gridImgs = $('.grid-item img');
-      var gridTitles = $('.grid-item h2');
-      $('.grid-item h2').animate({opacity: 0, left:'12%',top: '33%'}, 400);
-      $('.grid-item img').fadeOut(200);
+      var gridImgs = $('.grid_item img');
+      var gridTitles = $('.grid_item h2');
+      $('.grid_item h2').animate({opacity: 0, left:'12%',top: '33%'}, 400);
+      $('.grid_item img').fadeOut(200);
       setTimeout(function() {
         for (var i = 0; i < gridImgs.length; i++) {
           gridImgs[i].setAttribute('src', obj.hits[i].webformatURL);
@@ -18,8 +18,8 @@ $(function() {
         }
       }, 600);
       setTimeout(function() {
-        $('.grid-item img').fadeIn(200);
-        $('.grid-item h2').animate({opacity: 1, left: '12%', top: '33%'}, 600);
+        $('.grid_item img').fadeIn(200);
+        $('.grid_item h2').animate({opacity: 1, left: '12%', top: '33%'}, 600);
       }, 1000);
   }
 
@@ -60,8 +60,8 @@ $(function() {
   function getRandomImages() {
     var prot = (document.all && document.querySelector && !document.addEventListener) ? 'http' : 'https';
     crossDomainAjax( prot + '://pixabay.com/api/?key=2593977-12988caf15107fb1014806b9d&image_type=photo', function (obj) {
-            var gridImgs = $('.grid-item img');
-            var gridTitles = $('.grid-item h2');
+            var gridImgs = $('.grid_item img');
+            var gridTitles = $('.grid_item h2');
             for (var i = 0; i < gridImgs.length; i++) {
               gridImgs[i].setAttribute('src', obj.hits[i].webformatURL);
               gridTitles[i].innerHTML = obj.hits[i].tags;
@@ -78,4 +78,8 @@ $(function() {
   getRandomImages();
   $('.search_button').on('click',getImages);
 
+});
+
+$(function() {
+  $('.carousel-hider').slider();
 });
