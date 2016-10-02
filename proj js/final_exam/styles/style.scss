@@ -149,6 +149,10 @@ body {
     }
   }
 
+  .sectionhigh--slider {
+    display: none;
+  }
+
   .sectionhigh {
     max-width: 480px;
     height: 814px;
@@ -218,7 +222,7 @@ body {
         cursor: pointer;
       }
 
-      h1 {
+      .step_title {
         margin: 15px 0 0;
         font-size: 24px;
         text-align: left;
@@ -353,7 +357,7 @@ body {
         margin: 0 auto;
       }
 
-      .grid-item {
+      .grid_item {
         margin: 11px auto 0;
         width: 300px;
         height: 120px;
@@ -379,42 +383,6 @@ body {
           overflow: hidden;
 
         }
-      }
-
-      .grid1 {
-        background: url('../img/sport.jpg') no-repeat center;
-        background-position: -3px -31px;
-      }
-
-      .grid2 {
-        background: url('../img/wellness.jpg') no-repeat center;
-        background-position: -1px -125px;
-      }
-
-      .grid3 {
-        background: url('../img/extreme.jpg') no-repeat center;
-        line-height: 58px;
-        background-position: -8px -86px;
-      }
-
-      .grid4 {
-        background: url('../img/games.jpg') no-repeat center;
-        background-position: -9px -148px;
-      }
-
-      .grid5 {
-        background: url('../img/culture.jpg') no-repeat center;
-        background-position: 0px -51px;
-      }
-
-      .grid6 {
-        background: url('../img/relax.jpg') no-repeat center;
-        background-position: -9px -30px;
-      }
-
-      .grid7 {
-        background: url('../img/travelling.jpg') no-repeat center;
-        background-position: -9px -69px;
       }
     }
 
@@ -493,6 +461,7 @@ body {
 
       .sitemap_list {
         margin: 0 auto;
+        height: 20px;
         display: block;
         list-style-type: none;
 
@@ -512,6 +481,16 @@ body {
     }
 
     h4 {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-family: $font-headers-bold;
+      letter-spacing: 1px;
+      color: #666;
+      margin: 30px auto 12px;
+    }
+
+    h5 {
       font-size: 10px;
       font-family: $font-headers-bold;
       letter-spacing: 1px;
@@ -661,46 +640,64 @@ body {
     }
 
     .sectionhigh {
+      display: none;
+    }
+
+    .sectionhigh--slider {
       max-width: 768px;
-      height: 814px;
-      padding-top: 35px;
+      height: 556px;
 
-      h1 { margin: 0 16px; }
+      h1 {
+        margin: 92px auto 35px;
+        font-size: 22px;
+        text-align: center;
+      }
 
-      .steps {
-        max-width: 768px;
-        height: 740px;
-        margin: 0 auto;
-        list-style-type: none;
+      .carousel-hider {
+        width: 30.7%;
+        overflow: hidden;
         float: left;
+        position:relative;
+        margin: 0 1.3%;
+      }
 
-        .step_item {
-          display: block;
-          float: left;
-          max-width: 234px;
+      .carousel-list {
+        list-style: none;
+        width: 10000px;
+        padding: 0px;
+        position: relative;
+      }
+
+      .carousel-element,
+      .carousel-element1,
+      .carousel-element2 {
+        position: relative;
+        display: block;
+        margin-right: 20px;
+        float: left;
+        @include border-radius(4px);
+
+        img {
+          max-width: 236px;
           height: 400px;
-          margin: 7px 5px 9px;
         }
 
-        .step1 { background: url('../img/block2.jpg') no-repeat bottom; }
-        .step2 { background: url('../img/block3.jpg') no-repeat center; }
-        .step3 { background: url('../img/block4.jpg') no-repeat center; }
-
-        .step_wrapper {
-          background-color: rgba(0,0,0,0.25);
-          height: 100%;
-          width: 100%;
-        }
-
-        .step_content {
-          display: block;
-          float: left;
-          position: relative;
-          margin: 20px;
-          height: 200px;
-          width: 260px;
+        p {
+          text-align: center;
+          font-family: Tahoma;
           color: #f6f6f6;
         }
+      }
+
+      .step_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 150px 17% 0 7%;
+        height: 62%;
+        width: 85%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.2);
 
         .step_button {
           height: 20px;
@@ -712,11 +709,11 @@ body {
           font-family: $font-headers;
           font-size: 10px;
           letter-spacing: 3px;
-          margin: 49px 0 0 3px;
+          margin: 62px 0 0 3px;
         }
 
         .button2 {
-          margin: 80px 0 0 3px;
+          margin: 92px 0 0 3px;
         }
 
         .step_button:focus,
@@ -727,37 +724,71 @@ body {
           cursor: pointer;
         }
 
-        h1 {
+        .step_title {
           margin: 15px 0 0;
           font-size: 24px;
+          text-align: left;
+          color: $main-color;
+          width: 98%;
         }
 
         span {
+          width: 80%;
           font-family: $font-stack;
           font-size: 14px;
           position:absolute;
-          bottom:0;
+          bottom: 20px;
+          height: 60px;
           line-height: 15px;
+          color: #ccc;
         }
+
+      }
+
+      .carousel-arrow-left {
+        left: 8%;
+        top: 39px;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .carousel-arrow-right {
+        left: 79%;
+        top: 39px;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .carousel-arrow-left:hover, .carousel-arrow-right:hover {
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
       }
     }
 
-    .sectionmiddle {
-      width: 320px;
-      height: 1090px;
 
-      h1 { text-align: center; }
+    .sectionmiddle {
+      max-width: 768px;
+      height: 726px;
+
+      h1 {
+        margin: 0 auto 35px;
+        font-size: 22px;
+        text-align: center;
+      }
 
       .partners {
-        height: 940px;
-        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 530px;
+        margin: 0 auto;
+        width: 480px;
 
         .partners_item {
-          height: 229px;
-        }
-
-        .partner3 {
-          margin-top: 33px;
+          height: 256px;
+          width: 228px;
+          margin-right: 30px;
         }
 
         .partners_photo {
@@ -789,10 +820,8 @@ body {
 
         .partners_info {
           height: 100px;
-          width: 320px;
           display: flex;
           flex-direction: column;
-          align-items: center;
           text-align: center;
           margin-top: 14px;
 
@@ -812,14 +841,12 @@ body {
 
       .otherpartners {
         height: 60px;
-        width: 320px;
-        padding-top: 10px;
 
         .see {
           display: block;
           margin: 0 auto;
           height: 40px;
-          width: 280px;
+          width: 190px;
           background: $main-color;
           color: $button-color;
           font-family: $font-headers-bold;
@@ -838,74 +865,91 @@ body {
     }
 
     .sectionlow {
-      height: 1100px;
-      width: 320px;
+      height: 1384px;
+      max-width: 768px;
 
       h1 {
       text-align: center;
-      height: 55px;
+      height: 50px;
+      font-size: 22px;
       }
 
       .activities {
-        height: 910px;
-        width: 320px;
+        min-height: 970px;
+        max-width: 768px;
 
         .grid {
-          margin: 0 10px;
+          margin: 0 auto;
+          width: 100%;
+          height: 970px;
         }
 
-        .grid-item {
-          margin: 10px auto 0;
-          width: 300px;
-          height: 121px;
+        .grid_item {
+          height: 306px;
           @include border-radius(5px);
           text-align: center;
-          line-height: 120px;
           font-size: 22px;
           color: $main-color;
           font-family: $font-headers-bold;
         }
 
-        .grid1 {
-          background: url('../img/sport.jpg') no-repeat center;
-          background-position: -3px -31px;
+        .grid_item--1 {
+          width: 30%;
+          margin: 20px 0 0 1.3%;
         }
 
-        .grid2 {
-          background: url('../img/wellness.jpg') no-repeat center;
-          background-position: -1px -125px;
+        .grid_item--2 {
+          width: 30%;
+          margin: 20px 2.6% 0;
         }
 
-        .grid3 {
-          background: url('../img/extreme.jpg') no-repeat center;
-          line-height: 58px;
-          background-position: -8px -86px;
+        .grid_item--3 {
+          width: 30%;
+          margin: 20px 0 0 .3%;
         }
 
-        .grid4 {
-          background: url('../img/games.jpg') no-repeat center;
-          background-position: -9px -148px;
+        .grid_item--4 {
+          width: 30%;
+          margin: 20px 0 0 1.3%;
         }
 
-        .grid5 {
-          background: url('../img/culture.jpg') no-repeat center;
-          background-position: 0px -51px;
+        .grid_item--5,{
+          width: 63%;
+          margin: 20px 2.3% 0;
         }
 
-        .grid6 {
-          background: url('../img/relax.jpg') no-repeat center;
-          background-position: -9px -30px;
+        .grid_item--6 {
+          width: 63%;
+          margin: 20px 0 0 1.3%;
         }
 
-        .grid7 {
-          background: url('../img/travelling.jpg') no-repeat center;
-          background-position: -9px -69px;
+        .grid_item--7 {
+          width: 30%;
+          margin: 20px 0 0 1.9%;
+        }
+
+        img {
+          width: 100%;
+          height: 306px;
+          @include border-radius(5px);
+        }
+
+        h2 {
+          position: absolute;
+          top:33%;
+          left:12%;
+          font-size: 20px;
+          text-align: center;
+          width: 76%;
+          height: 24px;
+          color: $main-color;
+          z-index: 1;
         }
       }
 
       .search {
-        margin: 38px auto 28px;
-        height: 204px;
+        margin: 98px auto 28px;
+        height: 230px;
 
         h2 {
           margin-top: 6px;
@@ -914,12 +958,23 @@ body {
           text-align: center;
         }
 
+        .search_form {
+          width: 416px;
+          height: 46px;
+          margin: 37px auto 0;
+        }
+
+        form {
+          display: block;
+          float: left;
+        }
+
         input[type='text'] {
           box-sizing: border-box;
           padding-left: 14px;
           height: 40px;
-          margin: 15px 19px 12px;
-          width: 280px;
+          margin: 0 9px 12px;
+          width: 236px;
           border: 1px solid #9ba1a3;
           font-family: $font-stack;
           font-size: 14px;
@@ -930,9 +985,9 @@ body {
 
         .search_button {
           display: block;
-          margin: 0 auto;
+          float: left;
           height: 40px;
-          width: 280px;
+          width: 160px;
           background: $button-color;
           color: $main-color;
           font-family: $font-headers-bold;
@@ -952,27 +1007,33 @@ body {
     }
 
     .footer {
-      height: 192px;
-      width: 320px;
+      height: 165px;
+      max-width: 768px;
       border-top: 4px solid $button-color;
       text-align: center;
+      padding-top: 30px;
 
       h2 {
+        float: left;
         font-size: 17px;
         font-family: $font-headers-bold;
-        height: 46px;
-        line-height: 50px;
+        height: 33px;
+        width: 28%;
+        line-height: 29px;
         color: $button-color;
       }
 
-      h3 {
-        font-size: 14px;
-        font-family: $font-headers-bold;
-      }
-
       .sitemap {
-        height: 18px;
-        margin: 0 53px 12px;
+        float: left;
+        width: 22%;
+        margin: 4px 0;
+
+        h3 {
+          margin: 0 auto;
+          height: 30px;
+          font-size: 14px;
+          font-family: $font-headers-bold;
+        }
 
         .sitemap_list {
           margin: 0 auto;
@@ -981,25 +1042,38 @@ body {
 
           li {
           display: block;
-          float: left;
-          margin: 0 10px 0;
+
 
             a {
               text-decoration: none;
               color: #666;
               font-family: $font-stack;
-              font-size: 12px;
+              font-size: 14px;
             }
           }
         }
       }
 
       h4 {
+        display: block;
+        float: left;
+        margin: 5px 0;
+        width: 21%;
+        font-size: 14px;
+        font-family: $font-headers-bold;
+      }
+
+      .design {
+        float: right;
+        width: 25%;
+      }
+
+      h5 {
         font-size: 10px;
         font-family: $font-headers-bold;
         letter-spacing: 1px;
         color: #666;
-        margin: 13px auto 9px;
+        margin: 5px auto 9px;
       }
 
       .logo {
