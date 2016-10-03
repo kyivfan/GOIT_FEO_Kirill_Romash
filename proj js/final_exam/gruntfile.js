@@ -46,16 +46,15 @@ module.exports = function(grunt) {
         }]
       }
     },
-    // autoprefixer: {
-    //   options: {
-    //     browsers: ['IE 8', 'ie 9', 'last 2 versions' ]
-    //   },
-    //   dist: {
-    //     files: {
-    //        src: 'build/*.css',
-    //       }
-    //   }
-    // },
+    autoprefixer: {
+      options: {
+        browsers: ['IE 8', 'ie 9', 'last 2 versions' ]
+      },
+      dist: {
+        src: 'build/*.css',
+        dest: 'build/main.prefixed.css'
+      }
+    },
     watch : {
       options: {
         livereload: true,
@@ -78,8 +77,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   // grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  // grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['concat','concat_css','uglify','sass','imagemin']);
-// 'autoprefixer'
+  grunt.registerTask('default', ['concat','concat_css','uglify','sass','imagemin','autoprefixer']);
+
 };

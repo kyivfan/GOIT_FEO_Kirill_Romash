@@ -81,5 +81,5 @@ $(function() {
 });
 
 $(function() {
-  $('.carousel-hider').slider();
+  $('.carousel_hider').slider();
 });
