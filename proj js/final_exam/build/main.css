@@ -121,7 +121,7 @@
       body .header .header_button:active,
       body .header .header_button:hover {
         outline: none;
-        background: linear-gradient(to top, #f9dbdb, #c21416);
+        background: #a00709;
         cursor: pointer; }
       body .header h1 {
         font-size: 30px;
@@ -190,7 +190,7 @@
         body .sectionhigh .steps .step_button:focus,
         body .sectionhigh .steps .step_button:active,
         body .sectionhigh .steps .step_button:hover {
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           outline: none;
           cursor: pointer; }
         body .sectionhigh .steps .step_title {
@@ -214,9 +214,9 @@
         height: 940px;
         margin-top: 32px; }
         body .sectionmiddle .partners .partners_item {
-          height: 229px; }
-        body .sectionmiddle .partners .partners_item:hover {
           box-sizing: border-box;
+          border: 1px solid #fff; }
+        body .sectionmiddle .partners .partners_item:hover {
           border: 1px solid gray;
           background: rgba(0, 0, 0, 0.03); }
         body .sectionmiddle .partners .partner2 {
@@ -269,6 +269,7 @@
               cursor: pointer; }
           body .sectionmiddle .partners .partners_info .partners_text {
             width: 234px;
+            padding: 0 5px 0;
             font-family: "Roboto";
             font-size: 14px;
             margin: 11px auto 0;
@@ -296,7 +297,7 @@
         body .sectionmiddle .otherpartners .see:hover {
           outline: none;
           cursor: pointer;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           color: #fff; }
     body .sectionlow {
       height: 1234px;
@@ -382,7 +383,7 @@
         body .sectionlow .search .search_button:active,
         body .sectionlow .search .search_button:hover {
           outline: none;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           cursor: pointer; }
     body .footer {
       height: 192px;
@@ -548,7 +549,7 @@
       body .header .header_button:active,
       body .header .header_button:hover {
         outline: none;
-        background: linear-gradient(to top, #f9dbdb, #c21416);
+        background: #a00709;
         cursor: pointer; }
       body .header h1 {
         margin-top: 50px;
@@ -632,7 +633,7 @@
         body .sectionhigh--slider .step_content .step_button:focus,
         body .sectionhigh--slider .step_content .step_button:active,
         body .sectionhigh--slider .step_content .step_button:hover {
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           outline: none;
           cursor: pointer; }
         body .sectionhigh--slider .step_content .step_title {
@@ -681,9 +682,10 @@
         body .sectionmiddle .partners .partners_item {
           height: 256px;
           width: 228px;
-          margin-right: 30px; }
-        body .sectionmiddle .partners .partners_item:hover {
+          margin-right: 30px;
           box-sizing: border-box;
+          border: 1px solid #fff; }
+        body .sectionmiddle .partners .partners_item:hover {
           border: 1px solid gray;
           background: rgba(0, 0, 0, 0.03); }
         body .sectionmiddle .partners .partners_photo {
@@ -716,7 +718,6 @@
         body .sectionmiddle .partners .photo4 {
           background-position: 0px -719px; }
         body .sectionmiddle .partners .partners_info {
-          height: 100px;
           display: flex;
           flex-direction: column;
           text-align: center;
@@ -731,6 +732,7 @@
             body .sectionmiddle .partners .partners_info .partners_name a:hover {
               cursor: pointer; }
           body .sectionmiddle .partners .partners_info .partners_text {
+            padding: 0 10px 0;
             font-family: "Roboto";
             font-size: 14px;
             margin-top: 11px;
@@ -756,7 +758,7 @@
         body .sectionmiddle .otherpartners .see:hover {
           outline: none;
           cursor: pointer;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           color: #fff; }
     body .sectionlow {
       height: 1384px;
@@ -871,7 +873,7 @@
         body .sectionlow .search .search_button:active,
         body .sectionlow .search .search_button:hover {
           outline: none;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           cursor: pointer; }
     body .footer {
       height: 165px;
@@ -1045,7 +1047,7 @@
       body .header .header_button:active,
       body .header .header_button:hover {
         outline: none;
-        background: linear-gradient(to top, #f9dbdb, #c21416);
+        background: #a00709;
         cursor: pointer; }
       body .header h1 {
         margin-top: 50px;
@@ -1131,7 +1133,7 @@
         body .sectionhigh--slider .step_content .step_button:focus,
         body .sectionhigh--slider .step_content .step_button:active,
         body .sectionhigh--slider .step_content .step_button:hover {
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           outline: none;
           cursor: pointer; }
         body .sectionhigh--slider .step_content .step_title {
@@ -1182,10 +1184,10 @@
         body .sectionmiddle .partners .partners_item {
           display: block;
           float: left;
-          height: 240px;
+          box-sizing: border-box;
+          border: 1px solid #fff;
           width: 25%; }
         body .sectionmiddle .partners .partners_item:hover {
-          box-sizing: border-box;
           border: 1px solid gray;
           background: rgba(0, 0, 0, 0.03); }
         body .sectionmiddle .partners .partners_photo {
@@ -1233,6 +1235,7 @@
             body .sectionmiddle .partners .partners_info .partners_name a:hover {
               cursor: pointer; }
           body .sectionmiddle .partners .partners_info .partners_text {
+            padding: 0 10px 0;
             font-family: "Roboto";
             font-size: 14px;
             margin-top: 11px;
@@ -1258,7 +1261,7 @@
         body .sectionmiddle .otherpartners .see:hover {
           outline: none;
           cursor: pointer;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           color: #fff; }
     body .sectionlow {
       margin: 0 auto;
@@ -1375,7 +1378,7 @@
         body .sectionlow .search .search_button:active,
         body .sectionlow .search .search_button:hover {
           outline: none;
-          background: linear-gradient(to top, #f9dbdb, #c21416);
+          background: #a00709;
           cursor: pointer; }
     body .footer {
       height: 165px;
