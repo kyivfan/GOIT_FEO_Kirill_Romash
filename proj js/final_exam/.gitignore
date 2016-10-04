@@ -1,2 +1,4 @@
 proj/**/debug.log
 node_modules/
+.sass-cache/
+build/
