@@ -18,6 +18,7 @@
 @font-face {
   font-family: 'Roboto';
     src: url('../fonts/Roboto-light.ttf');
+    src: url('../fonts/Roboto-light.woff');
     font-weight: normal;
 }
 
@@ -87,6 +88,7 @@ body {
         outline: none;
         background: rgba(255, 255, 255, 0);
         cursor:pointer;
+        -webkit-transition: all 0.3s ease-in;
         transition: all 0.3s ease-in;
       }
 
@@ -159,7 +161,7 @@ body {
     }
   }
 
-  .sectionhigh--slider {
+  .sectionhigh_slider {
     display: none;
   }
 
@@ -168,7 +170,7 @@ body {
     height: 814px;
     padding-top: 34px;
 
-    h1 {
+    .sectionhigh_header {
       margin: 0 auto;
       text-align: center;
       width: 90%;
@@ -197,7 +199,7 @@ body {
         width: 100%;
       }
 
-      .step_content {
+      .step {
         display: block;
         float: left;
         position: relative;
@@ -244,6 +246,7 @@ body {
         position:absolute;
         bottom:0;
         line-height: 15px;
+        color: #ccc;
       }
     }
   }
@@ -263,12 +266,13 @@ body {
       margin-top: 32px;
 
       .partners_item {
+        height: 229px;
         box-sizing: border-box;
         border: 1px solid $main-color;
       }
 
       .partners_item:hover {
-
+        box-sizing: border-box;
         border: 1px solid gray;
         background: rgba(0, 0, 0, 0.03);
       }
@@ -307,9 +311,16 @@ body {
       .partners_info {
         height: 90px;
         max-width: 480px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         margin-top: 14px;
 
@@ -329,8 +340,7 @@ body {
         }
 
         .partners_text {
-          width: 234px;
-          padding: 0 5px 0;
+          padding: 0 40px;
           font-family: $font-stack;
           font-size: 14px;
           margin: 11px auto 0;
@@ -625,6 +635,7 @@ body {
           outline: none;
           background: rgba(255, 255, 255, 0);
           cursor:pointer;
+          -webkit-transition: all 0.3s ease-in;
           transition: all 0.3s ease-in;
         }
       }
@@ -685,9 +696,8 @@ body {
     }
 
     h1 {
-      margin-top: 50px;
-      height: 112px;
-      font-size: 51px;
+      height: 113px;
+      font-size: 50px;
       letter-spacing: 0.4px;
       max-width: 480px;
       margin: 0 auto;
@@ -705,11 +715,11 @@ body {
     display: none;
   }
 
-  .sectionhigh--slider {
+  .sectionhigh_slider {
     max-width: 768px;
     height: 556px;
 
-    h1 {
+    .sectionhigh_header {
       margin: 92px auto 35px;
       font-size: 22px;
       text-align: center;
@@ -742,6 +752,7 @@ body {
       img {
         max-width: 236px;
         height: 400px;
+
       }
 
       p {
@@ -751,58 +762,58 @@ body {
       }
     }
 
-    .step_content {
+    .step {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 150px 17% 0 7%;
-      height: 62%;
-      width: 85%;
+      padding: 152px 7% 0 7%;
       z-index: 1;
       background: rgba(0, 0, 0, 0.2);
 
-      .step_button {
-        height: 20px;
-        width: 70px;
-        @include border-radius(10px 10px);
-        background: $button-color;
-        color: $main-color;
-        border: none;
-        font-family: $font-headers;
-        font-size: 10px;
-        letter-spacing: 3px;
-        margin: 62px 0 0 3px;
-      }
+      .step_container {
+        position: relative;
+        max-width: 203px;
+        margin: 0 auto;
+        padding-bottom: 20px;
 
-      .button2 {
-        margin: 92px 0 0 3px;
-      }
+        .step_button {
+          height: 20px;
+          width: 70px;
+          @include border-radius(10px 10px);
+          background: $button-color;
+          color: $main-color;
+          border: none;
+          font-family: $font-headers;
+          font-size: 10px;
+          letter-spacing: 3px;
+          margin: 62px 0 0 3px;
+        }
 
-      .step_button:focus,
-      .step_button:active,
-      .step_button:hover {
-        background: $button-used;
-        outline: none;
-        cursor: pointer;
-      }
+        .button2 {
+          margin: 92px 0 0 3px;
+        }
 
-      .step_title {
-        margin: 15px 0 0;
-        font-size: 24px;
-        text-align: left;
-        color: $main-color;
-        width: 98%;
-      }
+        .step_button:focus,
+        .step_button:active,
+        .step_button:hover {
+          background: $button-used;
+          outline: none;
+          cursor: pointer;
+        }
 
-      span {
-        width: 80%;
-        font-family: $font-stack;
-        font-size: 14px;
-        position:absolute;
-        bottom: 20px;
-        height: 60px;
-        line-height: 15px;
-        color: #ccc;
+        .step_title {
+          margin: 15px 0 0;
+          font-size: 24px;
+          text-align: left;
+          color: $main-color;
+        }
+
+        span {
+          font-family: $font-stack;
+          font-size: 14px;
+          line-height: 15px;
+          color: #ccc;
+        }
       }
 
     }
@@ -839,9 +850,15 @@ body {
     }
 
     .partners {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       height: 530px;
       margin: 0 auto;
       width: 480px;
@@ -855,6 +872,7 @@ body {
       }
 
       .partners_item:hover {
+        box-sizing: border-box;
         border: 1px solid gray;
         background: rgba(0, 0, 0, 0.03);
       }
@@ -887,8 +905,14 @@ body {
       .photo4 {background-position: 0px -719px;}
 
       .partners_info {
+        height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
         margin-top: 14px;
 
@@ -908,7 +932,7 @@ body {
         }
 
         .partners_text {
-          padding: 0 10px 0;
+          padding: 0 15px;
           font-family: $font-stack;
           font-size: 14px;
           margin-top: 11px;
@@ -1256,6 +1280,7 @@ body {
           outline: none;
           background: rgba(255, 255, 255, 0);
           cursor:pointer;
+          -webkit-transition: all 0.3s ease-in;
           transition: all 0.3s ease-in;
         }
       }
@@ -1317,9 +1342,8 @@ body {
     }
 
     h1 {
-      margin-top: 50px;
-      height: 112px;
-      font-size: 51px;
+      height: 113px;
+      font-size: 50px;
       letter-spacing: 0.4px;
       max-width: 480px;
       margin: 0 auto;
@@ -1337,13 +1361,13 @@ body {
     display: none;
   }
 
-  .sectionhigh--slider {
+  .sectionhigh_slider {
     margin: 0 auto;
     min-width: 769px;
     max-width: 940px;
     height: 556px;
 
-    h1 {
+    .sectionhigh_header {
       margin: 92px auto 35px;
       font-size: 22px;
       text-align: center;
@@ -1385,58 +1409,62 @@ body {
       }
     }
 
-    .step_content {
+    .step {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 150px 15% 0 7%;
+      padding: 166px 7% 0 7%;
       height: 62%;
       width: 85%;
       z-index: 1;
       background: rgba(0, 0, 0, 0.2);
 
-      .step_button {
-        height: 20px;
-        width: 70px;
-        @include border-radius(10px 10px);
-        background: $button-color;
-        color: $main-color;
-        border: none;
-        font-family: $font-headers;
-        font-size: 10px;
-        letter-spacing: 3px;
-        margin: 62px 0 0 3px;
+      .step_container {
+        max-width: 258px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        .step_button {
+          height: 20px;
+          width: 70px;
+          @include border-radius(10px 10px);
+          background: $button-color;
+          color: $main-color;
+          border: none;
+          font-family: $font-headers;
+          font-size: 10px;
+          letter-spacing: 3px;
+          margin: 62px 0 0 3px;
+          }
+
+        .button2 {
+          margin: 92px 0 0 3px;
         }
 
-      .button2 {
-        margin: 92px 0 0 3px;
-      }
+        .step_button:focus,
+        .step_button:active,
+        .step_button:hover {
+          background: $button-used;
+          outline: none;
+          cursor: pointer;
+        }
 
-      .step_button:focus,
-      .step_button:active,
-      .step_button:hover {
-        background: $button-used;
-        outline: none;
-        cursor: pointer;
-      }
+        .step_title {
+          margin: 15px 0 0;
+          font-size: 24px;
+          text-align: left;
+          color: $main-color;
+        }
 
-      .step_title {
-        margin: 15px 0 0;
-        font-size: 24px;
-        text-align: left;
-        color: $main-color;
-        width: 98%;
-      }
-
-      span {
-        width: 80%;
-        font-family: $font-stack;
-        font-size: 14px;
-        position:absolute;
-        bottom: 20px;
-        height: 60px;
-        line-height: 15px;
-        color: #ccc;
+        span {
+          width: 80%;
+          font-family: $font-stack;
+          font-size: 14px;
+          bottom: 20px;
+          height: 60px;
+          line-height: 15px;
+          color: #ccc;
+        }
       }
     }
 
@@ -1483,14 +1511,16 @@ body {
       max-width: 940px;
 
       .partners_item {
-        display: block;
-        float: left;
         box-sizing: border-box;
         border: 1px solid $main-color;
+        display: block;
+        float: left;
+        height: 240px;
         width: 25%;
       }
 
       .partners_item:hover {
+        box-sizing: border-box;
         border: 1px solid gray;
         background: rgba(0, 0, 0, 0.03);
       }
@@ -1524,8 +1554,13 @@ body {
 
       .partners_info {
         height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
         margin-top: 14px;
 
@@ -1545,7 +1580,7 @@ body {
         }
 
         .partners_text {
-          padding: 0 10px 0;
+          padding: 0 5px;
           font-family: $font-stack;
           font-size: 14px;
           margin-top: 11px;
